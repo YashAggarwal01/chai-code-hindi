@@ -21,3 +21,4 @@ const arr3=arr1.join()//we get joined aray but arr3 become a string
 //splice is diffrent
 //what is the diffrence between them ,splice manupulate splice and slice retruns a copy of that section
 
+//to get to learn in depth go to inspect and decalre the object there and boom
