@@ -67,11 +67,11 @@ console.log(ins)
 //this is called de structuring,we can do array too
 //API start
 
-
+/*Below this a method of NodeJS
 {
     name:"hitesh",
     coursename:"js in hindi",
     fee:"free"
 }
-//API also get in form of array
+API also get in form of array*/
 
