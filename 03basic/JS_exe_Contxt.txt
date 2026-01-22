@@ -1,0 +1,76 @@
+here we dicuss how actually js works
+{} is must ,global Execution context
+1.Global Execution context(imp)
+2.Function/Functional Execution context(imp)
+3.Eval Execution Context(not so important)
+
+JS code execute in two phase(memory creation phase or creation phase,Execution phase)
+
+in the first phase only and only memory is allocated..all other things are done on second phase
+
+let val1=1
+let val2=2
+function add(a,b){
+    let total=a+b
+    return total
+}
+let result1 = add(val1,val2)
+let result2 = add(10,4)
+
+The very First is Global exe phase then first phase is MCP and variable get memory allocated and all variable get undefined
+**Very First {} GEC*
+
+*1.Memory Phase*
+        val1->undefined
+        val2->undefined
+        add->defination
+        result1->undefined
+        result2->undefined
+
+*First cycle complete and always ececuted*
+*2.Execution phase*
+
+        val1<-1
+        val1<-2
+        result1<-add<-
+                {
+                    again a new GEC is created with a new variable enviorment and ececution thread
+                    *1.Memory Phase*
+                        val1->undefined
+                        val2->undefined
+                        total->undefined
+                    *2.Execution Phase*
+                        num1->10
+                        num2->5
+                        total->15
+                        //now this retrun value is return to global execution context means to the most and very first GEC
+                    *Last*
+                        this GEC(actually second GEC) will be deleted the control shifted to first GEC(parent)
+
+
+                }
+        result2<-add<-
+        
+                    now again a new GEC is created with a NVE and ececution thread
+                    *1.Memory Phase*
+                        val1->undefined
+                        val2->undefined
+                        total->undefined
+                    *2.Execution Phase*
+                        num1->10
+                        num2->5
+                        total->15
+                        //now this retrun value is return to global execution context means to the most and very first GEC
+                    *Last*
+                        this GEC(actually third GEC) will be deleted the control shifted to first GEC(parent)
+
+
+                }
+
+
+This keeps on working and simply working of a basic function in JS
+
+
+====================================
+
+What is call Stack->execution is work in a stack manner as a programming basic as usual. This work in LIFO concept 
