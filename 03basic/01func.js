@@ -50,3 +50,37 @@ function loginusermessage1(username){
     return`${username} just logged in`
 }
 //we can also give deafault argument and two method for checking empty input
+
+console.log("===========================================================================")
+
+function cartprice(numb1){
+    return numb1;
+
+}
+console.log(cartprice(200,400,500));
+//we dont know how many args are incoming to calculate the price so we rest and spread method
+function cartprice1(...numb1){
+    return numb1;
+
+}
+console.log(cartprice1(200,400,500));
+///... means spread it bsaically add all the agrs into a array
+
+const user={
+    usename: "hitesh",
+    price:199
+}
+
+function handleobject(anyobj){
+    console.log(`username is ${anyobj.usename} and price is ${anyobj.price}`)
+}
+
+//handleobject(user) this is one of methoda and another is
+handleobject({username:"billu",price:90})
+const arr=[200,400,500,900]
+
+function returnsecval(arry){
+    return arry[1]
+}
+
+console.log(returnsecval(arr))//and similarly we can directly pass the array  without creating prior
