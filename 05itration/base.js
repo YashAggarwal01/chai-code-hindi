@@ -1,6 +1,6 @@
 //first loop is for loop as usual programming for loop
 
-const { useEffect } = require("react");
+
 
 for(let i=0;i<10;i++){
     console.log(i)
@@ -51,7 +51,17 @@ for (const key of map){
     console.log(key)
     
 }
-// for (const [key,value] of map){
-//     console.log(key,value);
+//for distinct key and value,basically destructing the map
+for (const [key,value] of map){
+    console.log(key,"->",value);
     
-// }
+}
+
+const myobj={
+    'gmae1':'NFS'
+    'game2':'Spiderman'
+}
+
+// for( const [key,value] of myobj){
+//     console.log(key,"->",value);   
+// }//will cause error as object is not itratable in this way
