@@ -48,7 +48,7 @@ let val;
 //val=undefined??10 will assign 10
 //val=5??10??20 -> will assing 10
 console.log(val)
-//it is usualyy for safety check
+//it is usualyy for safety check and it usua;y select the first incoming value
 
 //another operator is ternary operator
 
