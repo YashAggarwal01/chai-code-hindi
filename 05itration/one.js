@@ -37,7 +37,7 @@ for (const gret of greet) {
     console.log(gret);
 }
 
-//Maps,which holds key value pair and maintain the inserton order.....No duplicates and unique value
+//Maps,which holds key value pair and maintain the inserton order.....No duplicates and unique value...Main point map is not itratable
 
 const map = new Map()
 map.set('IN',"INDIA")
@@ -51,17 +51,46 @@ for (const key of map){
     console.log(key)
     
 }
-//for distinct key and value,basically destructing the map
+//for distinct key and value,basically destructing the map into array
 for (const [key,value] of map){
     console.log(key,"->",value);
     
 }
 
 const myobj={
-    'gmae1':'NFS'
+    'gmae1':'NFS',
     'game2':'Spiderman'
 }
 
 // for( const [key,value] of myobj){
 //     console.log(key,"->",value);   
-// }//will cause error as object is not itratable in this way
+// }//will cause error as object is not itratable in this for of loop
+
+//similarly we can itrate over a string
+ console.log("=======================================");
+const myobj1={
+    js:'javascript',
+    cpp:'c plus plus',
+    rb:"ruby",
+    swift:"by apple"
+};
+
+for (const key in myobj1) {
+    console.log(key);//only for showing keys
+    console.log(myobj1[key]);//for showing value assigned to key
+    console.log(`${key} shortcut is for ${myobj1[key]}`)
+    
+    
+    
+}
+ console.log("=======================================");
+ console.log("=======================================");
+
+
+ const arry1=["js","cpp","c"]
+ for (const key in arry1) {
+    
+    console.log(arry1[key]);
+    
+    
+ }
