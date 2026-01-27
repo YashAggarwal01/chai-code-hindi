@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billu Bodmosh</title>
+</head>
+<body style="background-color: #212121; color:#fff;">
+    
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div);
+    div.className="Main"
+    div.id = Math.round(Math.random()*10+1)
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding="13px"
+    div.innerHTML="chai aur code"
+    const addtxt=document.createTextNode("chai Aur Kode")
+    div.appendChild(addtxt)
+    document.body.appendChild(div)
+</script>
+</html>
