@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Ownnnn")
+    // }
+    //old approachh and bekar si
+    //in this event listen we also have a third argument,which is always n always false so we dont mention it but some applli. 
+    //can only be run with the help of these true/false interview Q
+    
+    //attachEvent()->old skool method ,internet exp time
+    //jQuery-> a frame just sim as react
+
+
+    // type, timestamp,defaultPrevented,target,toelement,srccElement,currentElemt
+    //clientx,clienty,screenx,screeny
+    //altkey, ctrlkey,shiftkey,keycode
+
+    //False & True third parameter
+    //
+    //bubbling and capturing these are out usecase and actual event ...what we actually want so this true and false is/
+    //is used to control the bubbling and capturing of event..to stop bubbling we have a method event stoppropogation
+    document.getElementById('images').addEventListener('click',function(evn){
+        console.log("Clicked inside ul");
+        
+    },false)
+    document.getElementById('owl').addEventListener('click',function(evn){
+        console.log("clciked outside ul");
+        evn.stopPropagation()
+    },false)
+    
+    document.getElementById('google').addEventListener('click',function(evn){
+        console.log("google,clicked");
+        evn.preventDefault()
+        evn.stopPropagation()
+        
+    })
+    document.querySelector('#images').addEventListener('click',function(evn){
+    console.log(evn);
+    console.log(evn.target.parentNode);
+    let remove_it=evn.target.parentNode
+    remove_it.remove()
+    //this can be done in multiple ways ny tagname or by selecting specifif childnode    
+    })
+
+
+
+
+</script>
