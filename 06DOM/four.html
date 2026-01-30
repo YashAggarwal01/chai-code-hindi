@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121 color #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+
+
+    </ul>
+</body>
+<script>
+    function addlang(lang_name){
+        const temp=document.createElement('li');
+        temp.innerHTML=`${lang_name}`;
+        document.querySelector('.language').appendChild(temp)
+
+
+    }
+    addlang('python')
+    addlang('typescript')
+    //this is the most usual way to crete a list but the issue is here we have only  single value in 
+    //LI but if it is 1000 or let say 10000 then it have to traverse whole tree so it is not optimised
+
+
+    function addlang_opti(lang_name){
+        const temp=document.createElement('li')//this step will be same as we must have to create a LI
+        temp.appendChild(document.createTextNode(lang_name))
+        document.querySelector('.language').appendChild(temp)
+
+
+    }
+    addlang_opti('c++')
+    addlang_opti('c+7')
+    //Method to Edit these value
+    const sec_lang=document.querySelector('li:nth-child(2)')
+    const third_lang=document.querySelector('li:nth-child(3)')
+    sec_lang.innerHTML="Mojo"//this works but not optimised
+    const new_li = document.createElement('li')
+    new_li.textContent="Tojo"
+    third_lang.replaceWith(new_li)
+    //Another Method
+    const first_lang=document.querySelector('li:first-child')
+    first_lang.outerHTML='<li>TypeScript</li>'
+
+    //remove
+    const last_lang=document.querySelector('li:last-child')
+    last_lang.remove()
+
+
+</script>
+</html>
