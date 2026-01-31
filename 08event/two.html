@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121; color:rgb(255, 255, 255)">
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const sayHitesh = function(){
+        console.log("hitesh");
+    }
+    setTimeout(sayHitesh,1000)
+    const changetxt = function(){
+        document.querySelector('h1').innerHTML="bestest JS"
+    }
+    setTimeout(changetxt,2000)
+    //to remove set time out we have a fx clear timeout but it require a refrence
+    //bcoz there are multiple settimeout so simply we can store the set time out fx 
+    //to a variable then can give refrence
+
+    const myName=setTimeout(function(){console.log("Yash")},1500)
+    
+    clearTimeout(myName)//now myname will not work
+    //usually we apply to event
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(myName)
+        console.log("Stopedddd!")
+    })
+    
+</script>
+</html>
