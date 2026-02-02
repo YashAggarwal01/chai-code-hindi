@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121; color:rgb(255, 255, 255)">
+    <h1>Chai aur JavaScript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    
+</body>
+<script>
+        // setInterval(function(){
+        //     console.log("Hitesh0",Date.now())
+        // },1000)
+        //can also be done like
+        const my_name = function(str){
+            console.log(str,Date.now())
+        }
+        const intvrl_id=setInterval(my_name,2000,"Hi")
+        clearInterval(intvrl_id)
+
+    
+    
+</script>
+</html>

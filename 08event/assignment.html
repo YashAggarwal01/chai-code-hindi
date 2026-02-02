@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssignMent Start and Stop </title>
+</head>
+<body style="background-color:#212121;color:rgb(230, 253, 255)">
+    <h1 style="letter-spacing: 2px;">AssignMent Of Start And Stop</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+</html>
+<script>
+    const say_name = function(){
+        console.log("Yash",Date.now())
+    };
+
+    let interval;
+    document.querySelector('#start').addEventListener('click',function(){
+        interval=setInterval(say_name,1000)
+        console.log("Started")
+    })
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(interval)
+        console.log("Stopped")
+    })
+</script>

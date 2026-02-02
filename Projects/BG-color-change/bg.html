@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Background Color Changer</title>
+</head>
+<body style="background-color: black; color:azure">
+    <h1 id="hd">Background Color Changer</h1>
+    <h1 id="std"></h1>
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+   </body>
+</html>
+<script>
+    const event = document.querySelector("#std")
+    const body = document.querySelector('body')
+    const heading=document.querySelector("#hd")
+
+    let get_num = function(){
+        return Math.floor(Math.random() * 256);
+    }
+    let bg_change;
+    document.querySelector('#start').addEventListener('click',function(){
+        event.innerHTML = "Started"
+        bg_change=setInterval(function(){
+            r_val=get_num()
+            g_val=get_num()
+            b_val=get_num()
+            body.style.backgroundColor = `rgb(${r_val},${g_val},${b_val})`
+            heading.style.color =`rgb(${b_val},${r_val},${g_val})`
+            
+        },1000x)
+        
+    })
+    document.querySelector('#stop').addEventListener('click',function(){
+        
+        clearInterval(bg_change)
+        event.innerHTML = "Stopped"
+    })
+
+</script>

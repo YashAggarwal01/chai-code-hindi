@@ -166,3 +166,66 @@ function EndGame(){
   newGame()
 }
 ```
+
+## Project 5(BG-Color)(BYc&c)
+```javascript
+//generate a random color
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+```
+
+## Project 5(BG-Color)(BY me)
+```javascript
+  const event = document.querySelector("#std")
+    const body = document.querySelector('body')
+    const heading=document.querySelector("#hd")
+
+    let get_num = function(){
+        return Math.floor(Math.random() * 256);
+    }
+    let bg_change;
+    document.querySelector('#start').addEventListener('click',function(){
+        event.innerHTML = "Started"
+        bg_change=setInterval(function(){
+            r_val=get_num()
+            g_val=get_num()
+            b_val=get_num()
+            body.style.backgroundColor = `rgb(${r_val},${g_val},${b_val})`
+            heading.style.color =`rgb(${b_val},${r_val},${g_val})`
+            
+        },1000x)
+        
+    })
+    document.querySelector('#stop').addEventListener('click',function(){
+        
+        clearInterval(bg_change)
+        event.innerHTML = "Stopped"
+    })
+}```
