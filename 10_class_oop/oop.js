@@ -26,7 +26,7 @@ function User(username,login_count,islogged){
 //by adding new code we get a acttual New instance of fx/class
 const user_one = new User("Hitesh",12,true)
 const user_two = new User("Yash",23,false)
-// console.log(user_one);
+//console.log(user_one);
 //console.log(user_two);
 console.log(user_two.constructor);
 
