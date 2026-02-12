@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clousure</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <script>
+        //closure is used to acess a function outside that is decalred in nested function 
+        //lets first try oridinary methods theory of function scoping
+        function outer(){
+            let username = 'hitesh'
+            function inner(){
+                console.log(username);
+                
+            }
+            inner()
+        }
+        outer()
+        console.log("too outer",username);
+        
+        // function init(){
+        //     let name = 'mozilla';
+        //     function disp_name(){
+        //         console.log(name);
+                
+        //     }
+        //     disp_name();
+        // }
+        // init();
+        //so basically lexical scoping is we can access variable of outer function in the function declared inside a function means a most n
+        //most nested function can access the variable of most outer function
+        //also remember same nested function cannot share their variable to each other 
+        //also parent function cannot acces inner function
+    </script>
+</body>
+</html>

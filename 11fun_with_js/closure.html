@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <button></button>
+    <script>
+        function makefunc(){
+            const name = "mozilla"
+            function disp_name(){
+                console.log(name);                
+            }
+            return disp_name;
+        }
+        const myfunc = makefunc();
+        myfunc(); 
+        //as here we are returning a nest function so here manyu people think that iska global exe context jaega but no iska puri memory share 
+        //iski memory completly share hoti hai,makesure to use lexical scope work
+    </script>
+    <script>
+
+    </script>
+
+</body>
+</html>
